@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat', 'Poppins', sans-serif;
 }
 
 body {
@@ -1070,6 +1072,325 @@ footer {
     footer {
         padding: 40px 20px 20px;
     }
+}
+
+/* PÁGINA DE CURSO INICIANTE */
+.curso-hero {
+    background: rgba(0, 0, 0, 0.15);
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.curso-hero h1 {
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.curso-hero p {
+    font-size: 20px;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.curso-info-destaque {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFD700;
+}
+
+.conteudo-curso {
+    padding: 80px 50px;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.curso-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.topico-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    transition: 0.3s;
+}
+
+.topico-card:hover {
+    border-color: #FFD700;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.topico-header {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.topico-numero {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 900;
+    color: #667eea;
+    flex-shrink: 0;
+}
+
+.topico-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    align-self: center;
+}
+
+.topico-conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.topico-descricao {
+    font-size: 16px;
+    color: #e0e0e0;
+    line-height: 1.8;
+    background: rgba(255, 215, 0, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 4px solid #FFD700;
+}
+
+.topico-topicos,
+.topico-objetivos,
+.topico-recursos {
+    display: grid;
+    gap: 15px;
+}
+
+.topico-topicos h3,
+.topico-objetivos h3,
+.topico-recursos h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.topico-topicos ul,
+.topico-objetivos ul,
+.topico-recursos ul {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.topico-topicos li,
+.topico-objetivos li,
+.topico-recursos li {
+    font-size: 15px;
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding-left: 25px;
+    position: relative;
+}
+
+.topico-topicos li:before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+    font-weight: 800;
+}
+
+.topico-objetivos li:before,
+.topico-recursos li:before {
+    content: '';
+}
+
+/* RESUMO DO CURSO */
+.resumo-curso {
+    padding: 80px 50px;
+}
+
+.resumo-curso h2 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.resumo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.resumo-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.resumo-item:hover {
+    transform: translateY(-8px);
+    border-color: #FFD700;
+    background: rgba(255, 215, 0, 0.15);
+}
+
+.resumo-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.resumo-item h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.resumo-item p {
+    font-size: 15px;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* ESTRUTURA DO CURSO */
+.estrutura-curso {
+    padding: 80px 50px;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.estrutura-curso h2 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.semanas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.semana-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    transition: 0.3s;
+}
+
+.semana-card:hover {
+    transform: translateY(-8px);
+    border-color: #FFD700;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.semana-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.semana-card ul {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.semana-card li {
+    font-size: 15px;
+    color: #e0e0e0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.semana-card li:before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+    font-weight: 800;
+}
+
+/* BOTÃO ESPECIAL */
+.btn-iniciar {
+    margin: 0 auto;
+    display: block;
+}
+
+/* DIFERENCIAIS */
+.diferenciais {
+    padding: 80px 50px;
+}
+
+.diferenciais h2 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.diferencial-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.diferencial-item:hover {
+    transform: translateY(-8px);
+    border-color: #FFD700;
+    background: rgba(255, 215, 0, 0.15);
+}
+
+.diferencial-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.diferencial-item h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.diferencial-item p {
+    font-size: 15px;
+    color: #e0e0e0;
+    line-height: 1.6;
 }
 
 /* CARDS */

@@ -31,6 +31,8 @@ Descreva seu projeto de forma mais detalhada aqui. Explique:
 - O que torna seu projeto único ou interessante
 - Público-alvo
 
+Este projeto tem como objetivo principal oferecer materiais e cursos gratuitos para que qualquer pessoa aprenda a programar com Scratch, independentemente de experiência prévia ou condição financeira.
+
 ### Por que este projeto foi criado?
 
 Este projeto foi desenvolvido como parte do curso [Nome do Curso] com o objetivo de aplicar conhecimentos práticos em desenvolvimento web front-end, criando uma aplicação completa e funcional.

@@ -163,35 +163,42 @@ const formConfig = {
 ## 📁 Estrutura de Pastas
 
 ```
-seu-projeto/
+Oficina_de_games_Scratch/
 │
-├── index.html                 # Página principal
+├── index.html                 # Página principal (home)
+├── cursos.html                # Página de cursos
+├── recursos.html              # Página de recursos
+├── contato.html               # Página de contato
+├── header.html                # Header reutilizável
 ├── README.md                  # Documentação do projeto
-├── LICENSE                    # Licença do projeto
 │
-├── assets/                    # Recursos estáticos
-│   ├── images/               # Imagens e ícones
-│   │   ├── logo.png
-│   │   ├── screenshot.png
-│   │   └── ...
-│   ├── videos/               # Vídeos (se houver)
-│   └── documents/            # Documentos (se houver)
+├── style.css                  # Estilos principais (global)
+├── script.js                  # Scripts JavaScript (global)
 │
-├── styles/                    # Arquivos CSS
-│   ├── style.css             # Estilos principais
-│   ├── responsive.css        # Media queries
-│   └── animations.css        # Animações
+├── Conta/                      # Pasta com páginas de autenticação
+│   ├── Login.html             # Página de login
+│   ├── Cadastro.html          # Página de cadastro
+│   └── style-conta.css        # Estilos específicos para autenticação
 │
-├── scripts/                   # Arquivos JavaScript
-│   ├── main.js               # Script principal
-│   ├── form.js               # Lógica do formulário
-│   └── utils.js              # Funções utilitárias
-│
-└── pages/                     # Páginas HTML adicionais
-    ├── sobre.html
-    ├── contato.html
-    └── portfolio.html
+└── cursos/                     # Pasta com páginas de cursos detalhadas
+    ├── curso-iniciante.html       # Curso nível iniciante
+    ├── curso-intermediario.html   # Curso nível intermediário
+    └── curso-avancado.html        # Curso nível avançado
 ```
+
+### Descrição dos Arquivos Principais
+
+- **index.html** - Página inicial com hero section e destaque dos cursos
+- **cursos.html** - Página de listagem de cursos com comparação de funcionalidades
+- **recursos.html** - Página com benefícios e recursos da plataforma
+- **contato.html** - Página com formulário de contato e informações de suporte
+- **header.html** - Componente de header reutilizado em todas as páginas
+- **style.css** - Estilos globais com temas, responsividade e animações
+- **script.js** - Funcionalidades gerais (menu hamburger, animações, etc.)
+- **Conta/Login.html** - Formulário de login com autenticação client-side
+- **Conta/Cadastro.html** - Formulário de cadastro com validação
+- **Conta/style-conta.css** - Estilos específicos para as páginas de autenticação
+- **cursos/curso-*.html** - Páginas detalhadas de cada nível de curso
 
 ## 🗺️ Roadmap
 

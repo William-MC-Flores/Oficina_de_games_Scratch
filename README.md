@@ -25,37 +25,52 @@ Uma breve descrição atraente do seu projeto. Explique em 2-3 linhas o que ele 
 
 ## Sobre o Projeto
 
-Descreva seu projeto de forma mais detalhada aqui. Explique:
-- O contexto e motivação para criar o projeto
-- Quais problemas ele resolve
-- O que torna seu projeto único ou interessante
-- Público-alvo
+Este projeto é um hub educativo focado em ensinar desenvolvimento de games usando Scratch. A ideia é oferecer um caminho claro, prático e gratuito para qualquer pessoa aprender a programar criando jogos — desde os conceitos básicos até técnicas avançadas — com exemplos, exercícios e projetos aplicados.
 
-Este projeto tem como objetivo principal oferecer materiais e cursos gratuitos para que qualquer pessoa aprenda a programar com Scratch, independentemente de experiência prévia ou condição financeira.
+### Contexto e Motivação
+Muitas pessoas têm interesse em aprender a programar, mas encontram barreiras como cursos caros, conteúdo fragmentado ou linguagem técnica excessiva. Scratch é uma plataforma ideal para educação porque usa blocos visuais e incentiva a aprendizagem ativa por meio de projetos. O projeto nasceu para democratizar o acesso a esse conhecimento, criando uma trilha pedagógica voltada para a construção de games — uma forma motivadora e prática de ensinar lógica, criatividade e resolução de problemas.
+
+### Quais problemas ele resolve
+- Acesso limitado: elimina a necessidade de pagar por material básico, oferecendo conteúdos e projetos gratuitos.
+- Falta de estrutura: organiza o aprendizado em níveis (iniciante → intermediário → avançado) com objetivos claros e projetos práticos.
+- Conteúdo não prático: prioriza "aprender fazendo" com exercícios e mini-projetos que reforçam conceitos.
+- Barreiras de idioma e contexto: fornece materiais em português e exemplos locais, tornando o aprendizado mais acessível.
+
+### O que torna seu projeto único ou interessante
+- Foco em games: todas as aulas e projetos têm aplicação direta em criação de jogos, o que aumenta o engajamento e permite construir um portfólio.
+- Progressão clara por níveis: cada nível tem metas, recursos e projetos próprios que evoluem em complexidade.
+- Gratuito e aberto: o projeto é pensado para ser acessível a todos, com materiais reutilizáveis e exemplos que educadores podem adaptar.
+- Comunidade e prática: incentiva compartilhamento de projetos e aprendizado colaborativo (por exemplo via Discord ou repositórios), algo essencial para crescer como desenvolvedor.
+
+### Público-alvo
+- Crianças e adolescentes interessados em games e programação.
+- Professores e educadores que querem inserir programação baseada em projetos nas aulas.
+- Iniciantes de qualquer idade que buscam uma forma prática e visual de aprender lógica de programação.
+- Hobbystas e autodidatas que desejam construir um portfólio de jogos simples a intermediários.
+
+Este texto pode ser refinado ou adaptado para um tom mais institucional ou mais informal, conforme você preferir — quer que eu ajuste estilo, tamanho dos parágrafos ou traduza para outro formato (ex.: seção curta para o site e versão longa para o README)?
 
 ### Por que este projeto foi criado?
 
-Este projeto foi desenvolvido como parte do curso [Nome do Curso] com o objetivo de aplicar conhecimentos práticos em desenvolvimento web front-end, criando uma aplicação completa e funcional.
+Este projeto foi desenvolvido como parte do curso [Gamelab] com o objetivo de aplicar conhecimentos práticos em desenvolvimento web front-end, criando uma aplicação completa e funcional.
 
 ## 🎬 Demonstração
 
-Acesse a versão ao vivo do projeto: [https://seu-usuario.github.io/seu-projeto](https://seu-usuario.github.io/seu-projeto)
+Acesse a versão ao vivo do projeto: [https://github.com/William-MC-Flores/Oficina_de_games_Scratch](Aqui)
 
-Ou assista ao vídeo de demonstração:
-
-![Demo GIF](./assets/images/demo.gif)
 
 ## ⚙️ Funcionalidades
 
-- ✅ Funcionalidade 1 - Descrição breve
-- ✅ Funcionalidade 2 - Descrição breve
-- ✅ Funcionalidade 3 - Descrição breve
-- ✅ Design responsivo para mobile, tablet e desktop
-- ✅ Animações suaves e interativas
-- ✅ Formulário de contato funcional
-- ✅ Navegação intuitiva
-- 🔄 Funcionalidade futura 1 (em desenvolvimento)
-- 🔄 Funcionalidade futura 2 (em desenvolvimento)
+- ✅ Trilhas de aprendizado por níveis (Iniciante → Intermediário → Avançado): cursos estruturados com objetivos, materiais e projetos práticos para cada etapa.
+- ✅ Aulas em vídeo e projetos práticos: lições curtas e exercícios aplicados que reforçam o aprendizado por meio da prática.
+- ✅ Conteúdo 100% gratuito: todo o material básico está disponível sem custo, com exemplos e templates reutilizáveis.
+- ✅ Design responsivo: o site foi desenvolvido para funcionar bem em mobile, tablet e desktop.
+- ✅ Animações e feedback interativo: microinterações e transições tornam a navegação mais intuitiva e o aprendizado mais engajador.
+- ✅ Formulário de contato funcional: permite enviar dúvidas e solicitações (pode ser integrado a um backend ou usado com serviços de email).
+- ✅ Navegação clara e acessível: menus organizados, estrutura de páginas consistente e suporte a navegação por teclado.
+- ✅ Certificado de conclusão (quando aplicável): emissão de certificado ao completar projetos e avaliações, para fortalecer o portfólio do aluno.
+- 🔄 Comunidade e suporte (em desenvolvimento): integração com canais comunitários (ex.: Discord) para troca de projetos e dúvidas.
+- 🔄 Ferramentas de avaliação automatizada (em desenvolvimento): recursos futuros para checagem automática de exercícios e feedback imediato.
 
 ## 🚀 Tecnologias Utilizadas
 

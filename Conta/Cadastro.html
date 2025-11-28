@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro - Conta | GameLab</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style-conta.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🎮 GameLab</div>
+    <nav class="nav-menu">
+        <a href="../index.html" class="nav-link">Início</a>
+        <a href="../cursos.html" class="nav-link">Cursos</a>
+        <a href="../recursos.html" class="nav-link">Recursos</a>
+        <a href="../contato.html" class="nav-link">Contato</a>
+    </nav>
+</header>
+
+<main class="auth-page">
+    <section class="auth-card">
+        <h1>Criar Conta</h1>
+        <p>Preencha os dados para criar sua conta. Use um e-mail válido (p.ex. Gmail).</p>
+
+        <form id="signupForm">
+            <label for="name">Nome da Conta</label>
+            <input type="text" id="name" name="name" required placeholder="Seu nome">
+
+            <label for="email">E-mail (Gmail)</label>
+            <input type="email" id="email" name="email" required placeholder="seu@gmail.com">
+
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" required placeholder="Senha (mín. 6 caracteres)">
+
+            <label for="confirm">Confirmar Senha</label>
+            <input type="password" id="confirm" name="confirm" required placeholder="Repita a senha">
+
+            <button type="submit" class="btn-primario">Criar Conta</button>
+        </form>
+
+        <p class="auth-note">Já tem conta? <a href="Login.html">Entrar</a></p>
+
+        <div id="signupMessage" class="auth-message" aria-live="polite"></div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 GameLab</p>
+</footer>
+
+<script>
+document.getElementById('signupForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim().toLowerCase();
+    const password = document.getElementById('password').value;
+    const confirm = document.getElementById('confirm').value;
+    const msg = document.getElementById('signupMessage');
+
+    if (password.length < 6) {
+        msg.textContent = 'A senha precisa ter pelo menos 6 caracteres.';
+        msg.className = 'auth-message error';
+        return;
+    }
+    if (password !== confirm) {
+        msg.textContent = 'As senhas não coincidem.';
+        msg.className = 'auth-message error';
+        return;
+    }
+
+    const usersJson = localStorage.getItem('gamelab_users');
+    const users = usersJson ? JSON.parse(usersJson) : [];
+    if (users.find(u => u.email === email)) {
+        msg.textContent = 'Já existe uma conta com este e-mail.';
+        msg.className = 'auth-message error';
+        return;
+    }
+
+    users.push({name, email, password});
+    localStorage.setItem('gamelab_users', JSON.stringify(users));
+
+    msg.textContent = 'Conta criada com sucesso! Redirecionando para login...';
+    msg.className = 'auth-message success';
+    setTimeout(()=> location.href = 'Login.html', 1000);
+});
+</script>
+
+</body>
+</html>

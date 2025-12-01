@@ -9,6 +9,13 @@
 </head>
 <body>
 
+<!-- BOTÃO HAMBURGER (fora do header para ser visível em mobile) -->
+<button id="hamburger-menu" class="hamburger-menu" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
 <header>
     <div class="logo">🎮 GameLab</div>
     <nav class="nav-menu">
@@ -18,6 +25,8 @@
         <a href="../contato.html" class="nav-link">Contato</a>
     </nav>
 </header>
+
+<a href="javascript:history.back();" class="btn-voltar">← Voltar</a>
 
 <main class="auth-page">
     <section class="auth-card">
@@ -74,6 +83,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e){
     setTimeout(()=> location.href = '../index.html', 1000);
 });
 </script>
+<script src="../hamburger-menu.js"></script>
 
 </body>
 </html>

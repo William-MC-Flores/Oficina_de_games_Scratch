@@ -1,38 +1,3 @@
-// Menu hamburger toggle para celular
-const hamburgerBtn = document.getElementById('hamburger-menu');
-const navMenu = document.getElementById('nav-menu');
-const header = document.querySelector('header');
-const navLinks = document.querySelectorAll('.nav-link');
-
-if (hamburgerBtn) {
-    hamburgerBtn.addEventListener('click', () => {
-        hamburgerBtn.classList.toggle('active');
-        header.classList.toggle('mobile-menu-open');
-        navMenu.classList.toggle('active');
-    });
-
-    // Fechar menu ao clicar em um link
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburgerBtn.classList.remove('active');
-            header.classList.remove('mobile-menu-open');
-            navMenu.classList.remove('active');
-        });
-    });
-
-    // Fechar menu ao clicar fora (em telas pequenas)
-    document.addEventListener('click', (e) => {
-        const isMobile = window.innerWidth <= 480;
-        if (isMobile && header.classList.contains('mobile-menu-open')) {
-            if (!header.contains(e.target) && !hamburgerBtn.contains(e.target)) {
-                hamburgerBtn.classList.remove('active');
-                header.classList.remove('mobile-menu-open');
-                navMenu.classList.remove('active');
-            }
-        }
-    });
-}
-
 // Efeito de clique nos botões
 document.querySelectorAll("button").forEach(btn => {
     btn.addEventListener("mousedown", () => {

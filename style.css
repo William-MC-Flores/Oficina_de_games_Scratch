@@ -80,7 +80,9 @@ header {
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 12px;
+    padding: 0;
+    margin: 0;
+    position: static;
 }
 
 .hamburger-menu span {
@@ -440,6 +442,7 @@ header {
 .btn-voltar{
     display: inline-block;
     padding: 8px 14px;
+    margin-left: 50px;
     background: rgba(255,255,255,0.04);
     color: #FFD700;
     border: 1px solid rgba(255,255,255,0.12);
@@ -1148,22 +1151,32 @@ footer {
     .hamburger-menu {
         display: flex;
         position: fixed;
-        top: 14px;
-        right: 16px;
+        top: 10px;
+        right: 10px;
         background: #FFD700;
-        padding: 12px;
-        border-radius: 10px;
-        z-index: 104;
-        box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+        padding: 10px 12px;
+        border-radius: 8px;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+        border: none;
+        cursor: pointer;
     }
 
     .hamburger-menu:hover {
         background: #FFA500;
-        box-shadow: 0 6px 16px rgba(255, 215, 0, 0.5);
+        box-shadow: 0 6px 16px rgba(255, 215, 0, 0.6);
+        transform: scale(1.05);
+    }
+
+    .hamburger-menu:active {
+        transform: scale(0.95);
     }
 
     .hamburger-menu span {
         background: #667eea;
+        width: 26px;
+        height: 3px;
+        display: block;
     }
 
     header {
@@ -1178,7 +1191,7 @@ footer {
         justify-content: flex-start;
         background: rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(10px);
-        z-index: 102;
+        z-index: 999;
         height: 100vh;
         width: 100%;
         gap: 0;
@@ -1319,6 +1332,20 @@ footer {
     .form-group textarea {
         padding: 12px;
         font-size: 15px;
+    }
+
+    /* Botão Scroll To Top reduzido em mobile */
+    #scrollTopBtn {
+        width: 40px;
+        height: 40px;
+        bottom: 100px;
+        right: 20px;
+        font-size: 18px;
+        box-shadow: 0 6px 16px rgba(255, 215, 0, 0.3);
+    }
+
+    #scrollTopBtn:hover {
+        transform: scale(1.08);
     }
 }
 
@@ -1663,4 +1690,31 @@ footer {
     background: #FF6B3B;
     border-radius: 50%;
     margin-bottom: 20px;
+}
+
+/* Botão Scroll To Top */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #FFD700;
+    color: #667eea;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer;
+    z-index: 99;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scrollTopBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.6);
 }

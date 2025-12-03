@@ -165,26 +165,27 @@ const formConfig = {
 ```
 Oficina_de_games_Scratch/
 │
-├── index.html                 # Página principal (home)
-├── cursos.html                # Página de cursos
-├── recursos.html              # Página de recursos
-├── contato.html               # Página de contato
-├── header.html                # Header reutilizável
-├── README.md                  # Documentação do projeto
+├── index.html
+├── cursos.html
+├── recursos.html
+├── contato.html
+├── header.html
+├── README.md
 │
-├── style.css                  # Estilos principais (global)
-├── script.js                  # Scripts JavaScript (global)
+├── style.css
+├── script.js
+├── hamburger-menu.js
 │
-├── Conta/                      # Pasta com páginas de autenticação
-│   ├── Login.html             # Página de login
-│   ├── Cadastro.html          # Página de cadastro
-│   └── style-conta.css        # Estilos específicos para autenticação
+├── Conta/
+│   ├── Cadastro.html
+│   ├── Login.html
+│   └── style-conta.css
 │
-└── cursos/                     # Pasta com páginas de cursos detalhadas
-    ├── curso-iniciante.html       # Curso nível iniciante
-    ├── curso-intermediario.html   # Curso nível intermediário
-    └── curso-avancado.html        # Curso nível avançado
-```
+└── cursos/
+    ├── curso-avancado.html
+    ├── curso-iniciante.html
+    └── curso-intermediario.html
+
 
 ### Descrição dos Arquivos Principais
 
@@ -200,17 +201,6 @@ Oficina_de_games_Scratch/
 - **Conta/style-conta.css** - Estilos específicos para as páginas de autenticação
 - **cursos/curso-*.html** - Páginas detalhadas de cada nível de curso
 
-## 🗺️ Roadmap
-
-- [x] Estrutura HTML básica
-- [x] Estilização CSS responsiva
-- [x] Implementação de JavaScript
-- [ ] Otimização de performance
-- [ ] Testes cross-browser
-- [ ] Adicionar modo escuro
-- [ ] Implementar animações avançadas
-- [ ] Integrar com API externa
-- [ ] Adicionar PWA (Progressive Web App)
 
 ## 🤝 Contribuindo
 

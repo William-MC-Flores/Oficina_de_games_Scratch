@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Oficina de Games em Scratch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BOTÃO HAMBURGER (fora do header para ser visível em mobile) -->
+<button id="hamburger-menu" class="hamburger-menu" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<!-- HEADER/NAVBAR -->
+<header>
+    <div class="logo">🎮 GameLab</div>
+    
+    <nav class="nav-menu">
+        <a href="index.html" class="nav-link" data-page="inicio">Início</a>
+        <a href="cursos.html" class="nav-link" data-page="cursos">Cursos</a>
+        <a href="recursos.html" class="nav-link" data-page="recursos">Recursos</a>
+        <a href="contato.html" class="nav-link active" data-page="contato">Contato</a>
+    </nav>
+
+    <div class="auth">
+        <a href="Conta/Login.html" class="login btn-link">Entrar</a>
+        <a href="Conta/Cadastro.html" class="signup btn-link">Começar Já</a>
+    </div>
+</header>
+
+<!-- HERO SECTION - CONTATO -->
+<section class="contato-hero">
+    <h1>Entre em Contato</h1>
+    <p>Tem dúvidas? Adoraríamos ajudar!</p>
+</section>
+
+<!-- CONTATO SECTION -->
+<section class="contato-main">
+    <div class="contato-container">
+        
+        <!-- FORMULÁRIO -->
+        <div class="contato-form">
+            <h2>Envie uma Mensagem</h2>
+            <form id="formulario-contato">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone (Opcional)</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                </div>
+
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione um assunto...</option>
+                        <option value="duvida">Dúvida sobre Cursos</option>
+                        <option value="tecnico">Problema Técnico</option>
+                        <option value="certificado">Certificado</option>
+                        <option value="parceria">Parceria</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            </form>
+        </div>
+
+        <!-- INFORMAÇÕES DE CONTATO -->
+        <div class="contato-info">
+            <h2>Informações de Contato</h2>
+            
+            <div class="info-box">
+                <div class="info-icon">✉️</div>
+                <div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:contato@gamelab.com">contato@gamelab.com</a></p>
+                    <p class="resposta-tempo">Respondemos em até 24 horas</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-icon">☎️</div>
+                <div>
+                    <h3>Telefone</h3>
+                    <p><a href="tel:+5511999999999">(11) 9999-9999</a></p>
+                    <p class="resposta-tempo">Seg-Sex, 9h às 18h</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-icon">📲</div>
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/5511999999999" target="_blank">(11) 9999-9999</a></p>
+                    <p class="resposta-tempo">Resposta rápida garantida</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-icon">🌐</div>
+                <div>
+                    <h3>Redes Sociais</h3>
+                    <div class="redes-sociais">
+                        <a href="#" class="social-link" title="Instagram">📷</a>
+                        <a href="#" class="social-link" title="Facebook">f</a>
+                        <a href="#" class="social-link" title="YouTube">▶️</a>
+                        <a href="#" class="social-link" title="Discord">🎮</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- HORÁRIOS -->
+<section class="horarios">
+    <h2>Horário de Atendimento</h2>
+    <div class="horarios-container">
+        <div class="horario-item">
+            <h3>Segunda a Sexta</h3>
+            <p>09:00 - 18:00</p>
+        </div>
+        <div class="horario-item">
+            <h3>Sábado</h3>
+            <p>10:00 - 14:00</p>
+        </div>
+        <div class="horario-item">
+            <h3>Domingo</h3>
+            <p>Fechado</p>
+        </div>
+        <div class="horario-item">
+            <h3>Emergências</h3>
+            <p>24/7 no Discord</p>
+        </div>
+    </div>
+</section>
+
+<!-- MAPA (opcional) -->
+<section class="localizacao">
+    <h2>Nossa Localização</h2>
+    <div class="mapa">
+        <p>🗺️ São Paulo, SP - Brasil</p>
+        <p>Oficina Digital GameLab</p>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+    <h2>Ainda com Dúvidas?</h2>
+    <p>Consulte nossa seção de Recursos ou fale conosco!</p>
+    <a href="recursos.html#faq" class="cta-big">Ver FAQ</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>GameLab</h4>
+            <p>Oficina de Games para Iniciantes em Scratch</p>
+        </div>
+        <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contato</h4>
+            <p>📧 contato@gamelab.com</p>
+            <p>📱 (11) 9999-9999</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 GameLab - Todos os direitos reservados</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="hamburger-menu.js"></script>
+</body>
+</html>

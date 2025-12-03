@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - Oficina de Games em Scratch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BOTÃO HAMBURGER (fora do header para ser visível em mobile) -->
+<button id="hamburger-menu" class="hamburger-menu" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<!-- HEADER/NAVBAR -->
+<header>
+    <div class="logo">🎮 GameLab</div>
+    
+    <nav class="nav-menu">
+        <a href="index.html" class="nav-link" data-page="inicio">Início</a>
+        <a href="cursos.html" class="nav-link active" data-page="cursos">Cursos</a>
+        <a href="recursos.html" class="nav-link" data-page="recursos">Recursos</a>
+        <a href="contato.html" class="nav-link" data-page="contato">Contato</a>
+    </nav>
+
+    <div class="auth">
+        <a href="Conta/Login.html" class="login btn-link">Entrar</a>
+        <a href="Conta/Cadastro.html" class="signup btn-link">Começar Já</a>
+    </div>
+</header>
+
+<!-- HERO SECTION - CURSOS -->
+<section class="cursos-hero">
+    <h1>Cursos Gratuitos</h1>
+    <p>Aprenda programação criando games incríveis com Scratch — totalmente gratuito</p>
+</section>
+
+<!-- CURSOS SECTION -->
+<section class="cursos" id="cursos">
+    <div class="curso-container">
+        
+        <div class="curso-card">
+            <div class="curso-header">
+                <div class="curso-icon">🚀</div>
+                <div class="curso-badge">Iniciante</div>
+            </div>
+            <h3>Nível Iniciante</h3>
+            <p>Aprenda o básico: movimento, sons e cores. Crie seu primeiro game em 2 semanas!</p>
+            
+            <div class="curso-info">
+                <span class="duracao">⏱️ 4 semanas</span>
+                <span class="nivel">📊 Iniciante</span>
+            </div>
+
+            <h4>O que você aprenderá:</h4>
+            <ul class="curso-lista">
+                <li>✓ Introdução ao Scratch</li>
+                <li>✓ Interface e Sprites</li>
+                <li>✓ Movimentação de Personagens</li>
+                <li>✓ Sons e Efeitos</li>
+                <li>✓ Seu 1º Game Completo</li>
+            </ul>
+
+            <div class="curso-preco">
+                <span class="valor">Gratuito</span>
+            </div>
+
+            <a href="cursos/curso-iniciante.html" class="btn-curso btn-primario">Acessar Curso</a>
+        </div>
+
+        <div class="curso-card destaque">
+            <div class="curso-header">
+                <div class="curso-icon">⭐</div>
+                <div class="curso-badge badge-intermediario">Intermediário</div>
+            </div>
+            <h3>Nível Intermediário</h3>
+            <p>Domine variáveis, loops e condicionais. Crie games mais complexos e divertidos!</p>
+            
+            <div class="curso-info">
+                <span class="duracao">⏱️ 6 semanas</span>
+                <span class="nivel">📊 Intermediário</span>
+            </div>
+
+            <h4>O que você aprenderá:</h4>
+            <ul class="curso-lista">
+                <li>✓ Variáveis e Listas</li>
+                <li>✓ Loops e Condicionais</li>
+                <li>✓ Detecção de Colisão</li>
+                <li>✓ Sistema de Pontuação</li>
+                <li>✓ Múltiplos Níveis</li>
+            </ul>
+
+            <div class="curso-preco">
+                <span class="valor">Gratuito</span>
+            </div>
+
+            <a href="cursos/curso-intermediario.html" class="btn-curso btn-primario btn-destaque">Acessar Curso</a>
+        </div>
+
+        <div class="curso-card">
+            <div class="curso-header">
+                <div class="curso-icon">🏆</div>
+                <div class="curso-badge badge-avancado">Avançado</div>
+            </div>
+            <h3>Nível Avançado</h3>
+            <p>Crie games profissionais com gráficos, sons e mecânicas avançadas!</p>
+            
+            <div class="curso-info">
+                <span class="duracao">⏱️ 8 semanas</span>
+                <span class="nivel">📊 Avançado</span>
+            </div>
+
+            <h4>O que você aprenderá:</h4>
+            <ul class="curso-lista">
+                <li>✓ Física do Game</li>
+                <li>✓ IA Básica</li>
+                <li>✓ Modo Multiplayer</li>
+                <li>✓ Otimização de Performance</li>
+                <li>✓ Seu Game Profissional</li>
+            </ul>
+
+            <div class="curso-preco">
+                <span class="valor">Gratuito</span>
+            </div>
+
+            <a href="cursos/curso-avancado.html" class="btn-curso btn-primario">Acessar Curso</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- COMPARAÇÃO CURSOS -->
+<section class="comparacao">
+    <h2>Compare os Cursos</h2>
+    <div class="tabela-comparacao">
+        <table>
+            <thead>
+                <tr>
+                    <th>Recursos</th>
+                    <th>Iniciante</th>
+                    <th>Intermediário</th>
+                    <th>Avançado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aulas em Vídeo</td>
+                    <td>✓ 20 aulas (conteúdo introdutório)</td>
+                    <td>✓ 35 aulas (conceitos intermediários)</td>
+                    <td>✓ 50 aulas (conteúdos avançados)</td>
+                </tr>
+                <tr>
+                    <td>Projetos Práticos</td>
+                    <td>✓ 5 projetos guiados</td>
+                    <td>✓ 10 projetos guiados</td>
+                    <td>✓ 15 projetos (inclui projeto final)</td>
+                </tr>
+                <tr>
+                    <td>Suporte</td>
+                    <td>✓ Suporte por email (resposta em até 72h)</td>
+                    <td>✓ Suporte por email + fórum da comunidade</td>
+                    <td>✓ Suporte por email + fórum da comunidade</td>
+                </tr>
+                <tr>
+                    <td>Certificado</td>
+                    <td>✓ Certificado de conclusão</td>
+                    <td>✓ Certificado de conclusão</td>
+                    <td>✓ Certificado de conclusão (com menção ao projeto final)</td>
+                </tr>
+                <tr>
+                    <td>Comunidade</td>
+                    <td>✓ Acesso ao grupo e fórum</td>
+                    <td>✓ Acesso ao grupo e fórum</td>
+                    <td>✓ Acesso ao grupo e fórum</td>
+                </tr>
+                <tr>
+                    <td>Material Adicional</td>
+                    <td>✓ PDFs e recursos básicos</td>
+                    <td>✓ PDFs, assets e exercícios</td>
+                    <td>✓ Pacote completo: PDFs, assets, exercícios e modelos</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+    <h2>Escolha seu Caminho</h2>
+    <p>Comece com o curso que melhor se adequa ao seu nível</p>
+    <a href="contato.html" class="cta-big">Fale Conosco</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>GameLab</h4>
+            <p>Oficina de Games para Iniciantes em Scratch</p>
+        </div>
+        <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contato</h4>
+            <p>📧 contato@gamelab.com</p>
+            <p>📱 (11) 9999-9999</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 GameLab - Todos os direitos reservados</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="hamburger-menu.js"></script>
+</body>
+</html>

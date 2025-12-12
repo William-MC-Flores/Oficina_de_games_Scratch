@@ -1,4 +1,3 @@
-// Efeito de clique nos botões
 document.querySelectorAll("button").forEach(btn => {
     btn.addEventListener("mousedown", () => {
         btn.style.transform = "scale(0.95)";
@@ -9,7 +8,6 @@ document.querySelectorAll("button").forEach(btn => {
     });
 });
 
-// Marcar link ativo no header baseado na página atual
 function atualizarLinkAtivo() {
     const paginaAtual = window.location.pathname.split('/').pop() || 'index.html';
     
@@ -21,10 +19,8 @@ function atualizarLinkAtivo() {
     });
 }
 
-// Chamar ao carregar a página
 atualizarLinkAtivo();
 
-// Scroll suave para links internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -38,7 +34,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Animação ao entrar na seção
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -53,7 +48,6 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Observar cards de cursos
 document.querySelectorAll('.curso-card').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
@@ -61,7 +55,6 @@ document.querySelectorAll('.curso-card').forEach(card => {
     observer.observe(card);
 });
 
-// Observar boxes de recursos
 document.querySelectorAll('.recurso-box').forEach(box => {
     box.style.opacity = '0';
     box.style.transform = 'translateY(20px)';
@@ -69,7 +62,6 @@ document.querySelectorAll('.recurso-box').forEach(box => {
     observer.observe(box);
 });
 
-// Observar cards de depoimentos
 document.querySelectorAll('.depoimento-card').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
@@ -77,7 +69,6 @@ document.querySelectorAll('.depoimento-card').forEach(card => {
     observer.observe(card);
 });
 
-// Observar boxes de estatísticas
 document.querySelectorAll('.stat-box').forEach(box => {
     box.style.opacity = '0';
     box.style.transform = 'translateY(20px)';
@@ -85,7 +76,6 @@ document.querySelectorAll('.stat-box').forEach(box => {
     observer.observe(box);
 });
 
-// Observar items de FAQ
 document.querySelectorAll('.faq-item').forEach(item => {
     item.style.opacity = '0';
     item.style.transform = 'translateY(20px)';
@@ -93,7 +83,6 @@ document.querySelectorAll('.faq-item').forEach(item => {
     observer.observe(item);
 });
 
-// Função para rolar ao topo
 function scrollToTop() {
     window.scrollTo({
         top: 0,
@@ -101,7 +90,6 @@ function scrollToTop() {
     });
 }
 
-// Mostrar/esconder botão "Voltar ao Topo"
 window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
         if (!document.getElementById('scrollTopBtn')) {
@@ -140,32 +128,90 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Logs de clique em CTAs
 document.querySelectorAll('.cta, .cta-big, .btn-curso').forEach(btn => {
     btn.addEventListener('click', () => {
         console.log('Um novo jogador está chegando!');
     });
 });
 
-// Formulário de contato
 const formularioContato = document.getElementById('formulario-contato');
 if (formularioContato) {
     formularioContato.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Pegar valores
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
         const assunto = document.getElementById('assunto').value;
         const mensagem = document.getElementById('mensagem').value;
         
-        // Aqui você pode enviar para um servidor
         console.log('Formulário enviado:', { nome, email, assunto, mensagem });
         
-        // Mostrar mensagem de sucesso
         alert('Obrigado ' + nome + '! Seu mensagem foi recebida. Responderemos em breve!');
         
-        // Limpar formulário
         formularioContato.reset();
     });
 }
+
+function enableInteractiveTitles() {
+    const headings = document.querySelectorAll('h1,h2,h3');
+    headings.forEach(h => {
+        if (h.dataset.interactive === '1') return;
+        const words = h.textContent.trim().split(/\s+/);
+        h.textContent = '';
+        const wrapper = document.createElement('div');
+        wrapper.style.position = 'relative';
+        wrapper.style.display = 'inline-block';
+        
+        if (typeof window._wordIdCounter === 'undefined') window._wordIdCounter = 0;
+        words.forEach((w, idx) => {
+            const span = document.createElement('span');
+            span.className = 'draggable-word';
+            const colorClasses = ['yellow','purple','blue','orange'];
+            const colorClass = colorClasses[idx % colorClasses.length];
+            span.classList.add(colorClass);
+            span.textContent = w;
+            span.style.display = 'inline-block';
+            span.style.margin = '4px 6px';
+            span.style.cursor = 'default';
+            span.style.fontSize = 'inherit';
+            span.style.fontFamily = "'Cascadia Code', monospace";
+            const id = 'w' + (++window._wordIdCounter);
+            span.setAttribute('data-word-id', id);
+            span.setAttribute('data-word-text', w);
+            wrapper.appendChild(span);
+            wrapper.appendChild(document.createTextNode(' '));
+        });
+        h.appendChild(wrapper);
+        h.dataset.interactive = '1';
+    });
+
+    window._layoutEnabled = true;
+    
+    function activateLayoutMode() {
+        const words = Array.from(document.querySelectorAll('.draggable-word')).map((el, idx) => {
+            const rect = el.getBoundingClientRect();
+            let colorClass = 'yellow';
+            ['yellow','purple','blue','orange'].forEach(c => { if (el.classList.contains(c)) colorClass = c; });
+            return {
+                id: el.getAttribute('data-word-id'),
+                text: el.getAttribute('data-word-text') || el.textContent,
+                left: rect.left,
+                top: rect.top,
+                width: rect.width || 280,
+                height: rect.height || 52,
+                colorClass: colorClass
+            };
+        });
+
+        if (window.LayoutCanvas) {
+            window.LayoutCanvas.enable(words);
+            document.querySelectorAll('.draggable-word').forEach(w => w.style.visibility = 'hidden');
+        }
+    }
+    
+    setTimeout(activateLayoutMode, 100);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    enableInteractiveTitles();
+});

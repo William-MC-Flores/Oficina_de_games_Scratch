@@ -24,73 +24,392 @@ body {
     color: var(--text-dark);
 }
 
-/* Scratch-inspired canvas and block styles */
+/* Scratch-inspired hero layout and block styles */
 .scratch-hero {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 24px;
+    gap: 48px;
+    padding: 0;
 }
 
+.hero-left {
+    flex: 1;
+    min-width: 320px;
+}
+
+.hero-right {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.canvas-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Canvas — larger and more prominent */
 #scratch-canvas {
-    width: 520px;
-    height: 320px;
-    border-radius: 12px;
-    background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 100%);
-    box-shadow: 0 12px 36px rgba(0,0,0,0.06);
-    border: 2px solid rgba(153,102,204,0.08);
+    width: 800px;
+    height: 480px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8);
+    border: 2px solid rgba(153,102,204,0.12);
     flex-shrink: 0;
     cursor: grab;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    display: block;
+}
+
+/* Canvas wrap with side panel */
+.canvas-wrap {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+#scratch-side {
+    width: 140px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 12px 34px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+    font-family: 'Cascadia Code', monospace;
+}
+
+#scratch-side h4 { margin: 0 0 8px 0; font-size: 14px; color: var(--primary-purple); }
+
+.vars-terminal {
+    background: #111213;
+    color: #e6e6e6;
+    padding: 10px;
+    border-radius: 8px;
+    min-height: 48px;
+    font-size: 13px;
+    overflow: auto;
+}
+
+.cat-controls { display: flex; flex-direction: column; gap: 8px; }
+.cat-controls .control-row { display:flex; gap:8px; align-items:center; }
+.cat-controls button { padding:6px 8px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); background:#fafafa; cursor:pointer; }
+.cat-controls input { padding:6px 8px; border-radius:6px; border:1px solid rgba(0,0,0,0.08); }
+
+.scratch-cat-container { text-align:center; margin-top:10px; }
+.scratch-cat { width:88px; transition: transform 0.25s ease; }
+
+.mini-scratch { padding: 40px 50px; background: linear-gradient(180deg,#ffffff,#fbfbfe); border-top: 1px solid rgba(0,0,0,0.03); }
+.mini-container { max-width: 1180px; margin: 0 auto; }
+.mini-scratch h2 { font-family: 'Fredoka', sans-serif; color: var(--primary-purple); margin-bottom: 4px; }
+.mini-sub { color: #666; margin-bottom: 16px; }
+
+.canvas-wrap { align-items: flex-start; }
+
+/* Styles for interactive title words — Scratch-authentic blocks (matches layout-mode) */
+.draggable-word {
+    /* DOM representation of Scratch blocks (visible outside layout mode) */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px 16px 16px;
+    color: white !important;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'Cascadia Code', monospace;
+    cursor: grab;
+    border: none;
+    white-space: nowrap;
+    position: relative;
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: center;
+    /* Scratch block base shape with rounded corners — MUST match canvas exactly */
+    border-radius: 10px;
+    height: 52px;
+    box-shadow: 
+        3px 6px rgba(0, 0, 0, 0.12),
+        0 6px 14px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Top notch effect using ::before — EXACTLY matches canvas (44×14) */
+.draggable-word::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 14px;
+    background: inherit;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Bottom tab effect using ::after — EXACTLY matches canvas (44×18) */
+.draggable-word::after {
+    content: '';
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 18px;
+    background: inherit;
+    border-radius: 10px 10px 8px 8px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.draggable-word:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        3px 10px rgba(0, 0, 0, 0.15),
+        0 10px 24px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.draggable-word:hover::before {
+    box-shadow: 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+.draggable-word:hover::after {
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+.draggable-word:active {
+    transform: translateY(-2px);
+    cursor: grabbing;
+    box-shadow: 
+        3px 4px rgba(0, 0, 0, 0.12),
+        0 4px 10px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+#scratch-canvas:hover {
+    border-color: rgba(153,102,204,0.2);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+#scratch-canvas:active {
+    cursor: grabbing;
+}
+
+.scratch-cat-container {
+    width: fit-content;
+    text-align: center;
+    margin: 4px auto;
 }
 
 .scratch-cat {
-    width: 160px;
+    width: 180px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    background: linear-gradient(180deg, rgba(255,204,0,0.06), rgba(15,189,140,0.04));
+    box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+    background: transparent;
     padding: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .scratch-cat:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    transform: scale(1.05);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.15);
 }
 
-/* Block visuals (drawn by canvas too, but these helper classes for fallback) */
-.scratch-block {
-    display: inline-block;
-    padding: 12px 16px;
-    border-radius: 16px 14px 14px 16px;
-    background: var(--primary-purple, #9966CC);
+/* Demo blocks — Scratch authentic styling */
+.scratch-block-demo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 18px 16px 16px 18px;
     color: white;
     font-weight: 700;
-    font-size: 13px;
-    box-shadow: 0 6px 16px rgba(153,102,204,0.28);
-    border: none;
+    font-size: 14px;
+    font-family: 'Cascadia Code', monospace;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: none;
+    white-space: nowrap;
 }
 
-.scratch-block:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(153,102,204,0.35);
+.scratch-block-demo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.scratch-block-demo:active {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.scratch-block-demo i {
+    font-size: 14px;
+}
+
+/* Scratch block colors (autênticas) */
+.scratch-block-demo.orange {
+    background: #FF8C33; /* laranja sol */
+    color: white;
+}
+
+.scratch-block-demo.green {
+    background: #4CAF50;
+    color: white;
+}
+
+.scratch-block-demo.purple {
+    background: #9966CC; /* roxo tulipa */
+    color: white;
+}
+
+.scratch-block-demo.blue {
+    background: #4DA6FF; /* azul ceu */
+    color: white;
+}
+
+.scratch-block-demo.yellow {
+    background: #FFCC00; /* amarelo ouro */
+    color: white;
+}
+
+.scratch-block-demo.red {
+    background: #EF5350;
+    color: white;
+}
+
+/* Draggable word (title blocks) color classes — same palette */
+.draggable-word.orange {
+    background: #FF8C33;
+    color: white !important;
+}
+
+.draggable-word.green {
+    background: #4CAF50;
+    color: white !important;
+}
+
+.draggable-word.purple {
+    background: #9966CC;
+    color: white !important;
+}
+
+.draggable-word.blue {
+    background: #4DA6FF;
+    color: white !important;
+}
+
+.draggable-word.yellow {
+    background: #FFCC00;
+    color: white !important;
+}
+
+.draggable-word.red {
+    background: #EF5350;
+    color: white !important;
 }
 
 /* Small helper for icon inside blocks */
-.scratch-block .icon {
-    margin-right: 6px;
-    font-size: 12px;
+.scratch-block-demo .icon {
     display: inline-block;
 }
 
-/* Responsive: shrink canvas on small screens */
+/* Responsive: shrink canvas and reorganize on small screens */
+@media (max-width: 1200px) {
+    .scratch-hero {
+        gap: 32px;
+    }
+    #scratch-canvas {
+        width: 680px;
+        height: 420px;
+    }
+    
+    /* Blocos responsivos em tablets */
+    .draggable-word {
+        font-size: 14px;
+        padding: 14px 18px 14px 14px;
+        height: 48px;
+    }
+    
+    .draggable-word::before {
+        width: 40px;
+        height: 12px;
+        top: -11px;
+    }
+    
+    .draggable-word::after {
+        width: 40px;
+        height: 16px;
+        bottom: -16px;
+    }
+}
+
 @media (max-width: 900px) {
-    #scratch-canvas { width: 360px; height: 220px; }
-    .scratch-cat { width: 120px; }
-    .scratch-hero { flex-direction: column; align-items: center; }
+    .scratch-hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .hero-left {
+        width: 100%;
+        text-align: center;
+    }
+    #scratch-canvas {
+        width: 100%;
+        max-width: 720px;
+        height: 360px;
+    }
+    .scratch-cat {
+        width: 150px;
+    }
+    
+    /* Hero responsivo */
+    .hero {
+        flex-direction: column;
+        padding: 60px 30px;
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 42px;
+    }
+    
+    .game-illustration {
+        width: 280px;
+        height: 280px;
+        font-size: 80px;
+    }
+    
+    /* Blocos responsivos - manter interatividade */
+    .draggable-word {
+        font-size: 13px;
+        padding: 12px 16px 12px 12px;
+        height: 44px;
+    }
+    
+    .draggable-word::before {
+        width: 36px;
+        height: 11px;
+        top: -10px;
+    }
+    
+    .draggable-word::after {
+        width: 36px;
+        height: 14px;
+        bottom: -14px;
+    }
+    
+    /* Canvas overlay responsivo */
+    #layout-overlay-canvas {
+        touch-action: none;
+    }
 }
 /* HEADER */
 header {
@@ -259,6 +578,14 @@ header {
     font-family: 'Fredoka', sans-serif;
 }
 
+.hero-text h1 > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .hero-text p {
     font-size: 18px;
     color: #555;
@@ -361,6 +688,14 @@ header {
     text-align: center;
     color: var(--text-dark);
     font-family: 'Fredoka', sans-serif;
+}
+
+.cursos h2 > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
 }
 
 .curso-container {
@@ -1475,6 +1810,140 @@ footer {
 
     #scrollTopBtn:hover {
         transform: scale(1.08);
+    }
+    
+    /* Blocos responsivos mobile - manter funcionalidade completa */
+    .draggable-word {
+        font-size: 12px;
+        padding: 10px 14px 10px 10px;
+        height: 40px;
+        margin: 3px 4px;
+    }
+    
+    .draggable-word::before {
+        width: 32px;
+        height: 10px;
+        top: -9px;
+    }
+    
+    .draggable-word::after {
+        width: 32px;
+        height: 12px;
+        bottom: -12px;
+    }
+    
+    /* Layout canvas mobile - touch friendly */
+    #layout-overlay-canvas {
+        touch-action: none;
+        cursor: grab;
+    }
+    
+    /* Hero mobile */
+    .hero {
+        padding: 40px 20px;
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    
+    .hero-text p {
+        font-size: 15px;
+    }
+    
+    .game-illustration {
+        width: 220px;
+        height: 220px;
+        font-size: 60px;
+    }
+    
+    /* Mini scratch mobile */
+    .mini-scratch {
+        padding: 30px 20px;
+    }
+    
+    #scratch-canvas {
+        width: 100%;
+        height: 280px;
+    }
+    
+    .canvas-wrap {
+        flex-direction: column;
+    }
+    
+    #scratch-side {
+        width: 100%;
+    }
+    
+    /* Cursos mobile */
+    .curso-card {
+        padding: 20px;
+    }
+    
+    .curso-card h3 {
+        font-size: 18px;
+    }
+    
+    /* Topicos mobile */
+    .topico-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .topico-numero {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+        margin: 0 auto;
+    }
+    
+    .topico-header h2 {
+        font-size: 24px;
+    }
+    
+    /* Contato mobile */
+    .contato-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ajustes para telas muito pequenas (≤ 320px) */
+@media (max-width: 320px) {
+    .draggable-word {
+        font-size: 11px;
+        padding: 8px 12px 8px 8px;
+        height: 36px;
+        margin: 2px 3px;
+    }
+    
+    .draggable-word::before {
+        width: 28px;
+        height: 9px;
+        top: -8px;
+    }
+    
+    .draggable-word::after {
+        width: 28px;
+        height: 10px;
+        bottom: -10px;
+    }
+    
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    
+    .game-illustration {
+        width: 180px;
+        height: 180px;
+        font-size: 48px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .curso-card h3 {
+        font-size: 16px;
     }
 }
 

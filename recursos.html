@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursos - Oficina de Games em Scratch</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -17,25 +18,32 @@
 
 <!-- HEADER/NAVBAR -->
 <header>
-    <div class="logo">🎮 GameLab</div>
+    <div class="logo"><i class="fab fa-scratch"></i> GameLab</div>
     
     <nav class="nav-menu">
-        <a href="index.html" class="nav-link" data-page="inicio">Início</a>
-        <a href="cursos.html" class="nav-link" data-page="cursos">Cursos</a>
-        <a href="recursos.html" class="nav-link active" data-page="recursos">Recursos</a>
-        <a href="contato.html" class="nav-link" data-page="contato">Contato</a>
+        <a href="index.html" class="nav-link" data-page="inicio"><i class="fas fa-home"></i> Início</a>
+        <a href="cursos.html" class="nav-link" data-page="cursos"><i class="fas fa-book"></i> Cursos</a>
+        <a href="recursos.html" class="nav-link active" data-page="recursos"><i class="fas fa-toolbox"></i> Recursos</a>
+        <a href="contato.html" class="nav-link" data-page="contato"><i class="fas fa-envelope"></i> Contato</a>
     </nav>
 
     <div class="auth">
-        <a href="Conta/Login.html" class="login btn-link">Entrar</a>
-        <a href="Conta/Cadastro.html" class="signup btn-link">Começar Já</a>
+        <a href="Conta/Login.html" class="login btn-link"><i class="fas fa-sign-in-alt"></i> Entrar</a>
+        <a href="Conta/Cadastro.html" class="signup btn-link"><i class="fas fa-user-plus"></i> Começar Já</a>
     </div>
 </header>
 
 <!-- HERO SECTION - RECURSOS -->
 <section class="recursos-hero">
-    <h1>Recursos e Benefícios</h1>
-    <p>Descubra por que somos a melhor escolha para aprender games em Scratch</p>
+    <div style="display: flex; align-items: center; gap: 24px; justify-content: space-between;">
+        <div>
+            <h1>Recursos e Benefícios</h1>
+            <p>Descubra por que somos a melhor escolha para aprender games em Scratch</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="recursos/scratch-cat.png" alt="Scratch Cat" class="scratch-cat" style="width: 140px; margin-bottom: 8px;" onerror="this.style.opacity=0.65;">
+        </div>
+    </div>
 </section>
 
 <!-- RECURSOS SECTION -->
@@ -44,42 +52,42 @@
     <div class="recursos-grid">
         
         <div class="recurso-box">
-            <div class="recurso-icon">👨‍🏫</div>
+            <div class="recurso-icon"><i class="fas fa-chalkboard-user"></i></div>
             <h3>Professores Especializados</h3>
             <p>Instrutores com experiência em educação e desenvolvimento de games. Aprenda com quem realmente sabe!</p>
             <a href="#" class="saiba-mais">Saiba mais →</a>
         </div>
 
         <div class="recurso-box">
-            <div class="recurso-icon">💻</div>
+            <div class="recurso-icon"><i class="fas fa-laptop"></i></div>
             <h3>100% Online</h3>
             <p>Aprenda no seu ritmo, de qualquer lugar, a qualquer hora. Sem horários fixos, você escolhe quando estudar!</p>
             <a href="#" class="saiba-mais">Saiba mais →</a>
         </div>
 
         <div class="recurso-box">
-            <div class="recurso-icon">📱</div>
+            <div class="recurso-icon"><i class="fas fa-comments"></i></div>
             <h3>Suporte Ativo</h3>
             <p>Comunidade engajada pronta para ajudar suas dúvidas. Nunca fique bloqueado em um problema!</p>
             <a href="#" class="saiba-mais">Saiba mais →</a>
         </div>
 
         <div class="recurso-box">
-            <div class="recurso-icon">🎓</div>
+            <div class="recurso-icon"><i class="fas fa-certificate"></i></div>
             <h3>Certificado</h3>
             <p>Receba certificado ao concluir cada nível de aprendizado. Comprove suas habilidades para empregadores!</p>
             <a href="#" class="saiba-mais">Saiba mais →</a>
         </div>
 
         <div class="recurso-box">
-            <div class="recurso-icon">🌟</div>
+            <div class="recurso-icon"><i class="fas fa-star"></i></div>
             <h3>Projetos Reais</h3>
             <p>Crie games reais que você pode compartilhar com amigos. Construa seu portfólio desde o início!</p>
             <a href="#" class="saiba-mais">Saiba mais →</a>
         </div>
 
         <div class="recurso-box">
-            <div class="recurso-icon">🚀</div>
+            <div class="recurso-icon"><i class="fas fa-rocket"></i></div>
             <h3>Carreira em Games</h3>
             <p>Prepare-se para uma carreira incrível na indústria de games. Abra portas para o futuro!</p>
             <a href="#" class="saiba-mais">Saiba mais →</a>
@@ -94,10 +102,10 @@
     <div class="depoimentos-container">
         
         <div class="depoimento-card">
-            <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+            <div class="depoimento-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
             <p class="depoimento-texto">"Nunca pensei que conseguiria criar um game! A metodologia da GameLab é perfeita para iniciantes. Amei cada aula!"</p>
             <div class="depoimento-autor">
-                <div class="avatar">👦</div>
+                <div class="avatar"><i class="fas fa-user-circle"></i></div>
                 <div>
                     <strong>João Silva</strong>
                     <p>Aluno do Nível Iniciante</p>
@@ -106,10 +114,10 @@
         </div>
 
         <div class="depoimento-card">
-            <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+            <div class="depoimento-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
             <p class="depoimento-texto">"Os professores são incríveis e o suporte é muito bom. Agora estou criando games com mecânicas avançadas!"</p>
             <div class="depoimento-autor">
-                <div class="avatar">👧</div>
+                <div class="avatar"><i class="fas fa-user-circle"></i></div>
                 <div>
                     <strong>Maria Santos</strong>
                     <p>Aluna do Nível Intermediário</p>
@@ -161,32 +169,32 @@
     <div class="faq-container">
         
         <div class="faq-item">
-            <h3 class="faq-pergunta">❓ Preciso de experiência prévia em programação?</h3>
+            <h3 class="faq-pergunta"><i class="fas fa-question-circle"></i> Preciso de experiência prévia em programação?</h3>
             <p class="faq-resposta">Não! Nossos cursos gratuitos foram desenvolvidos especificamente para iniciantes. Você aprenderá desde o básico.</p>
         </div>
 
         <div class="faq-item">
-            <h3 class="faq-pergunta">❓ Qual é o tempo de acesso aos cursos?</h3>
+            <h3 class="faq-pergunta"><i class="fas fa-question-circle"></i> Qual é o tempo de acesso aos cursos?</h3>
             <p class="faq-resposta">Acesso vitalício! Uma vez inscrito, você pode assistir às aulas quantas vezes quiser.</p>
         </div>
 
         <div class="faq-item">
-            <h3 class="faq-pergunta">❓ Os cursos têm certificado?</h3>
+            <h3 class="faq-pergunta"><i class="fas fa-question-circle"></i> Os cursos têm certificado?</h3>
             <p class="faq-resposta">Sim! Todos os cursos contêm certificado de conclusão que você pode compartilhar em seu LinkedIn.</p>
         </div>
 
         <div class="faq-item">
-            <h3 class="faq-pergunta">❓ Posso fazer os cursos no celular?</h3>
+            <h3 class="faq-pergunta"><i class="fas fa-question-circle"></i> Posso fazer os cursos no celular?</h3>
             <p class="faq-resposta">Sim! Nossa plataforma é responsiva e funciona em qualquer dispositivo. Aprenda de onde quiser!</p>
         </div>
 
         <div class="faq-item">
-            <h3 class="faq-pergunta">❓ Há garantia de reembolso?</h3>
+            <h3 class="faq-pergunta"><i class="fas fa-question-circle"></i> Há garantia de reembolso?</h3>
             <p class="faq-resposta">Claro! Se não ficar satisfeito, oferecemos reembolso total em 30 dias.</p>
         </div>
 
         <div class="faq-item">
-            <h3 class="faq-pergunta">❓ Como é o acesso à comunidade?</h3>
+            <h3 class="faq-pergunta"><i class="fas fa-question-circle"></i> Como é o acesso à comunidade?</h3>
             <p class="faq-resposta">Você terá acesso a um Discord privado com outros alunos e professores para tirar dúvidas!</p>
         </div>
 
@@ -218,8 +226,8 @@
         </div>
         <div class="footer-section">
             <h4>Contato</h4>
-            <p>📧 contato@gamelab.com</p>
-            <p>📱 (11) 9999-9999</p>
+            <p><i class="fas fa-envelope"></i> contato@gamelab.com</p>
+            <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
         </div>
     </div>
     <div class="footer-bottom">

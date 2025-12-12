@@ -143,7 +143,7 @@ window.addEventListener('scroll', () => {
 // Logs de clique em CTAs
 document.querySelectorAll('.cta, .cta-big, .btn-curso').forEach(btn => {
     btn.addEventListener('click', () => {
-        console.log('🎮 Um novo jogador está chegando!');
+        console.log('Um novo jogador está chegando!');
     });
 });
 

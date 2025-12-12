@@ -1,19 +1,26 @@
 /* Styles specific to the Conta (Login / Cadastro) pages */
-/* Align colors with global `style.css` (primary blue and gold accents) */
+/* Align colors with global `style.css` (Scratch color scheme) */
 :root{
-    --primary: #667eea; /* main blue used site-wide */
-    --accent: #FFD700;  /* gold accent */
-    --accent-2: #FFA500; /* orange */
-    --muted: #e0e0e0;    /* light text */
-    --input-bg: rgba(255,255,255,0.1);
-    --card-bg: rgba(255,255,255,0.06);
-    --card-border: rgba(255,255,255,0.15);
-    --error-color: #FF6B3B;
-    --success-color: #64ffc8;
+    --primary-purple: #9966CC;
+    --primary-yellow: #FFCC00;
+    --primary-blue: #0FBD8C;
+    --primary-white: #FFFFFF;
+    --bg-light: #F5F5F5;
+    --text-dark: #2D2D2D;
+    --input-bg: #FFFFFF;
+    --card-bg: var(--bg-light);
+    --card-border: #e0e0e0;
+    --error-color: #E63946;
+    --success-color: #06D6A0;
 }
 
 html, body { height: 100%; }
-body { -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+body { 
+    -webkit-font-smoothing:antialiased; 
+    -moz-osx-font-smoothing:grayscale;
+    background: var(--primary-white);
+    font-family: 'Cascadia Code', 'Poppins', sans-serif;
+}
 
 .auth-page{
     display:flex;
@@ -29,63 +36,136 @@ body { -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
     background: var(--card-bg);
     padding:28px;
     border-radius:14px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
     border:2px solid var(--card-border);
-    color: var(--muted);
+    color: var(--text-dark);
 }
 
-.auth-card h1{font-size:22px;margin:0 0 6px;color: #fff}
-.auth-card p{color:var(--muted);margin:0 0 14px}
+.auth-card h1{
+    font-size:22px;
+    margin:0 0 6px;
+    color: var(--primary-purple);
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 800;
+}
 
+.auth-card p{
+    color:var(--text-dark);
+    margin:0 0 14px;
+}
 
-label{display:block;font-weight:700;margin-top:12px;color:var(--muted)}
-input[type="text"],input[type="email"],input[type="password"]{
+label{
+    display:block;
+    font-weight:700;
+    margin-top:12px;
+    color:var(--text-dark);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
     width:100%;
     padding:12px 14px;
     margin-top:8px;
     border-radius:10px;
-    border:2px solid rgba(255,255,255,0.12);
+    border:2px solid #e0e0e0;
     background: var(--input-bg);
-    color: #fff;
+    color: var(--text-dark);
     font-size:15px;
     box-sizing:border-box;
+    font-family: 'Cascadia Code', sans-serif;
+    transition: 0.3s;
 }
 
-input::placeholder{color: rgba(255,255,255,0.6)}
+input::placeholder{
+    color: #aaa;
+}
 
-input:focus{outline:none;border-color: var(--accent); box-shadow: 0 0 0 6px rgba(255,215,0,0.06)}
+input:focus{
+    outline:none;
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 6px rgba(153, 102, 204, 0.1);
+}
 
 .btn-primario{
     display:inline-block;
     width:100%;
     padding:12px 14px;
     margin-top:16px;
-    background:var(--primary);
-    color:#fff;
+    background: var(--primary-yellow);
+    color: var(--primary-purple);
     border-radius:10px;
     border:none;
     font-weight:800;
     cursor:pointer;
+    font-family: 'Cascadia Code', sans-serif;
+    transition: 0.3s;
 }
 
-.btn-primario:hover{background:#5568d3}
+.btn-primario:hover{
+    background: var(--primary-blue);
+    color: white;
+    transform: translateY(-2px);
+}
 
-.auth-note{margin-top:12px;color:var(--muted)}
-.auth-note a{color:var(--accent);text-decoration:none;font-weight:700}
+.auth-note{
+    margin-top:12px;
+    color:var(--text-dark);
+}
 
-.auth-message{margin-top:12px;padding:10px;border-radius:8px;display:block;color:#fff}
-.auth-message.success{background: rgba(100,255,200,0.12); color: var(--success-color)}
-.auth-message.error{background: rgba(255,107,59,0.12); color: var(--error-color)}
+.auth-note a{
+    color:var(--primary-purple);
+    text-decoration:none;
+    font-weight:700;
+}
+
+.auth-message{
+    margin-top:12px;
+    padding:10px;
+    border-radius:8px;
+    display:block;
+    color:#fff;
+}
+
+.auth-message.success{
+    background: rgba(6, 214, 160, 0.15); 
+    color: var(--success-color);
+}
+
+.auth-message.error{
+    background: rgba(230, 57, 70, 0.15); 
+    color: var(--error-color);
+}
 
 /* small header link styles for Conta pages */
-.nav-menu{display:flex;gap:12px}
-.nav-menu .nav-link{color:#fff;text-decoration:none;font-weight:700}
+.nav-menu{
+    display:flex;
+    gap:12px;
+}
+
+.nav-menu .nav-link{
+    color:var(--text-dark);
+    text-decoration:none;
+    font-weight:700;
+}
 
 /* header small adjustments when conta pages are shown */
-header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:transparent}
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 28px;
+    background:var(--primary-white);
+    border-bottom: 2px solid var(--primary-purple);
+}
 
 /* responsive */
 @media (max-width:520px){
-    .auth-card{padding:20px;border-radius:10px}
-    .auth-page{padding:28px 12px}
+    .auth-card{
+        padding:20px;
+        border-radius:10px;
+    }
+    .auth-page{
+        padding:28px 12px;
+    }
 }

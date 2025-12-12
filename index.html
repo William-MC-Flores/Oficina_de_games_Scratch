@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oficina de Games - Scratch para Iniciantes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -17,33 +18,44 @@
 
 <!-- HEADER/NAVBAR -->
 <header>
-    <div class="logo">🎮 GameLab</div>
+    <div class="logo"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2023%2F08%2FScratch-Symbol.png&f=1&nofb=1&ipt=427e02e71c4ce30b49be6fe200579f79947841353c894b893b6888df4ce5693c" alt=""></div>
     
     <nav class="nav-menu">
-        <a href="index.html" class="nav-link active" data-page="inicio">Início</a>
-        <a href="cursos.html" class="nav-link" data-page="cursos">Cursos</a>
-        <a href="recursos.html" class="nav-link" data-page="recursos">Recursos</a>
-        <a href="contato.html" class="nav-link" data-page="contato">Contato</a>
+        <a href="index.html" class="nav-link active" data-page="inicio"><i class="fas fa-home"></i> Início</a>
+        <a href="cursos.html" class="nav-link" data-page="cursos"><i class="fas fa-book"></i> Cursos</a>
+        <a href="recursos.html" class="nav-link" data-page="recursos"><i class="fas fa-toolbox"></i> Recursos</a>
+        <a href="contato.html" class="nav-link" data-page="contato"><i class="fas fa-envelope"></i> Contato</a>
     </nav>
 
     <div class="auth">
-        <a href="Conta/Login.html" class="login btn-link">Entrar</a>
-        <a href="Conta/Cadastro.html" class="signup btn-link">Começar Já</a>
+        <a href="Conta/Login.html" class="login btn-link"><i class="fas fa-sign-in-alt"></i> Entrar</a>
+        <a href="Conta/Cadastro.html" class="signup btn-link"><i class="fas fa-user-plus"></i> Começar Já</a>
     </div>
 </header>
 
 <!-- HERO SECTION -->
+<!-- HERO SECTION -->
 <section class="hero" id="inicio">
-    <div class="hero-text">
-        <span class="tag">PARA INICIANTES</span>
-        <h1>Crie Seus<br>Próprios Games</h1>
-        <p>Aprenda programação de forma divertida criando games com Scratch. Sem experiência prévia necessária!</p>
-        <a href="Conta/Cadastro.html" class="cta">Comece Grátis</a>
-    </div>
+    <div class="hero-text scratch-hero">
+        <div>
+            <span class="tag">Para Iniciantes</span>
+            <h1>Crie Seus<br>Próprios Games</h1>
+            <p>Aprenda programação de forma divertida criando games com Scratch. Sem experiência prévia necessária!</p>
+            <div style="margin-top:8px;">
+                <a href="Conta/Cadastro.html" class="cta"><i class="fas fa-rocket"></i> Comece Grátis</a>
+            </div>
+            <div style="margin-top:12px;">
+                <span class="scratch-block"><span class="icon"><i class="fas fa-database"></i></span> Variáveis</span>
+                <span class="scratch-block" style="margin-left:10px; background:#0FBD8C;"><span class="icon"><i class="fas fa-code"></i></span> Mudar</span>
+            </div>
+        </div>
 
-    <div class="hero-img">
-        <div class="game-illustration">
-            🎮<span>Scratch</span>
+        <div>
+            <small style="display:block; color:var(--text-dark); margin-bottom:8px;">Preview — blocos interativos</small>
+            <canvas id="scratch-canvas" aria-label="Canvas com blocos estilo Scratch"></canvas>
+            <div style="margin-top:12px; text-align:center;">
+                <img src="recursos/scratch-cat.png" alt="Scratch Cat" class="scratch-cat" onerror="this.style.opacity=0.65;">
+            </div>
         </div>
     </div>
 </section>
@@ -52,7 +64,7 @@
 <section class="cta-section">
     <h2>Pronto para Começar?</h2>
     <p>Junte-se a milhares de iniciantes que já criaram seus games!</p>
-    <a href="cursos.html" class="cta-big">Conheça Nossos Cursos Gratuitos</a>
+    <a href="cursos.html" class="cta-big"><i class="fas fa-play-circle"></i> Conheça Nossos Cursos Gratuitos</a>
 </section>
 
 <!-- FOOTER -->
@@ -73,8 +85,8 @@
         </div>
         <div class="footer-section">
             <h4>Contato</h4>
-            <p>📧 contato@gamelab.com</p>
-            <p>📱 (11) 9999-9999</p>
+            <p><i class="fas fa-envelope"></i> contato@gamelab.com</p>
+            <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
         </div>
     </div>
     <div class="footer-bottom">
@@ -84,5 +96,6 @@
 
 <script src="script.js"></script>
 <script src="hamburger-menu.js"></script>
+<script src="scratch-canvas.js"></script>
 </body>
 </html>

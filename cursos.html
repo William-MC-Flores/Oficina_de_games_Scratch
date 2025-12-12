@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos - Oficina de Games em Scratch</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -17,25 +18,33 @@
 
 <!-- HEADER/NAVBAR -->
 <header>
-    <div class="logo">🎮 GameLab</div>
+    <div class="logo"><i class="fab fa-scratch"></i> GameLab</div>
     
     <nav class="nav-menu">
-        <a href="index.html" class="nav-link" data-page="inicio">Início</a>
-        <a href="cursos.html" class="nav-link active" data-page="cursos">Cursos</a>
-        <a href="recursos.html" class="nav-link" data-page="recursos">Recursos</a>
-        <a href="contato.html" class="nav-link" data-page="contato">Contato</a>
+        <a href="index.html" class="nav-link" data-page="inicio"><i class="fas fa-home"></i> Início</a>
+        <a href="cursos.html" class="nav-link active" data-page="cursos"><i class="fas fa-book"></i> Cursos</a>
+        <a href="recursos.html" class="nav-link" data-page="recursos"><i class="fas fa-toolbox"></i> Recursos</a>
+        <a href="contato.html" class="nav-link" data-page="contato"><i class="fas fa-envelope"></i> Contato</a>
     </nav>
 
     <div class="auth">
-        <a href="Conta/Login.html" class="login btn-link">Entrar</a>
-        <a href="Conta/Cadastro.html" class="signup btn-link">Começar Já</a>
+        <a href="Conta/Login.html" class="login btn-link"><i class="fas fa-sign-in-alt"></i> Entrar</a>
+        <a href="Conta/Cadastro.html" class="signup btn-link"><i class="fas fa-user-plus"></i> Começar Já</a>
     </div>
 </header>
 
 <!-- HERO SECTION - CURSOS -->
 <section class="cursos-hero">
-    <h1>Cursos Gratuitos</h1>
-    <p>Aprenda programação criando games incríveis com Scratch — totalmente gratuito</p>
+    <div style="display: flex; align-items: center; gap: 24px; justify-content: space-between;">
+        <div>
+            <h1>Cursos Gratuitos</h1>
+            <p>Aprenda programação criando games incríveis com Scratch — totalmente gratuito</p>
+        </div>
+        <div style="text-align: center;">
+            <small style="display: block; color: var(--text-dark); margin-bottom: 8px;">Blocos Scratch</small>
+            <canvas id="scratch-canvas-cursos" width="360" height="200" style="border-radius:12px; background:linear-gradient(180deg,#f7f9fc,#fff); box-shadow:0 12px 36px rgba(0,0,0,0.06); border:2px solid rgba(153,102,204,0.08); cursor:grab;"></canvas>
+        </div>
+    </div>
 </section>
 
 <!-- CURSOS SECTION -->
@@ -44,89 +53,89 @@
         
         <div class="curso-card">
             <div class="curso-header">
-                <div class="curso-icon">🚀</div>
+                <div class="curso-icon"><i class="fas fa-rocket"></i></div>
                 <div class="curso-badge">Iniciante</div>
             </div>
             <h3>Nível Iniciante</h3>
             <p>Aprenda o básico: movimento, sons e cores. Crie seu primeiro game em 2 semanas!</p>
             
             <div class="curso-info">
-                <span class="duracao">⏱️ 4 semanas</span>
-                <span class="nivel">📊 Iniciante</span>
+                <span class="duracao"><i class="fas fa-clock"></i> 4 semanas</span>
+                <span class="nivel"><i class="fas fa-chart-bar"></i> Iniciante</span>
             </div>
 
             <h4>O que você aprenderá:</h4>
             <ul class="curso-lista">
-                <li>✓ Introdução ao Scratch</li>
-                <li>✓ Interface e Sprites</li>
-                <li>✓ Movimentação de Personagens</li>
-                <li>✓ Sons e Efeitos</li>
-                <li>✓ Seu 1º Game Completo</li>
+                <li><i class="fas fa-check"></i> Introdução ao Scratch</li>
+                <li><i class="fas fa-check"></i> Interface e Sprites</li>
+                <li><i class="fas fa-check"></i> Movimentação de Personagens</li>
+                <li><i class="fas fa-check"></i> Sons e Efeitos</li>
+                <li><i class="fas fa-check"></i> Seu 1º Game Completo</li>
             </ul>
 
             <div class="curso-preco">
                 <span class="valor">Gratuito</span>
             </div>
 
-            <a href="cursos/curso-iniciante.html" class="btn-curso btn-primario">Acessar Curso</a>
+            <a href="cursos/curso-iniciante.html" class="btn-curso btn-primario"><i class="fas fa-play"></i> Acessar Curso</a>
         </div>
 
         <div class="curso-card destaque">
             <div class="curso-header">
-                <div class="curso-icon">⭐</div>
+                <div class="curso-icon"><i class="fas fa-star"></i></div>
                 <div class="curso-badge badge-intermediario">Intermediário</div>
             </div>
             <h3>Nível Intermediário</h3>
             <p>Domine variáveis, loops e condicionais. Crie games mais complexos e divertidos!</p>
             
             <div class="curso-info">
-                <span class="duracao">⏱️ 6 semanas</span>
-                <span class="nivel">📊 Intermediário</span>
+                <span class="duracao"><i class="fas fa-clock"></i> 6 semanas</span>
+                <span class="nivel"><i class="fas fa-chart-bar"></i> Intermediário</span>
             </div>
 
             <h4>O que você aprenderá:</h4>
             <ul class="curso-lista">
-                <li>✓ Variáveis e Listas</li>
-                <li>✓ Loops e Condicionais</li>
-                <li>✓ Detecção de Colisão</li>
-                <li>✓ Sistema de Pontuação</li>
-                <li>✓ Múltiplos Níveis</li>
+                <li><i class="fas fa-check"></i> Variáveis e Listas</li>
+                <li><i class="fas fa-check"></i> Loops e Condicionais</li>
+                <li><i class="fas fa-check"></i> Detecção de Colisão</li>
+                <li><i class="fas fa-check"></i> Sistema de Pontuação</li>
+                <li><i class="fas fa-check"></i> Múltiplos Níveis</li>
             </ul>
 
             <div class="curso-preco">
                 <span class="valor">Gratuito</span>
             </div>
 
-            <a href="cursos/curso-intermediario.html" class="btn-curso btn-primario btn-destaque">Acessar Curso</a>
+            <a href="cursos/curso-intermediario.html" class="btn-curso btn-primario btn-destaque"><i class="fas fa-play"></i> Acessar Curso</a>
         </div>
 
         <div class="curso-card">
             <div class="curso-header">
-                <div class="curso-icon">🏆</div>
+                <div class="curso-icon"><i class="fas fa-trophy"></i></div>
                 <div class="curso-badge badge-avancado">Avançado</div>
             </div>
             <h3>Nível Avançado</h3>
             <p>Crie games profissionais com gráficos, sons e mecânicas avançadas!</p>
             
             <div class="curso-info">
-                <span class="duracao">⏱️ 8 semanas</span>
-                <span class="nivel">📊 Avançado</span>
+                <span class="duracao"><i class="fas fa-clock"></i> 8 semanas</span>
+                <span class="nivel"><i class="fas fa-chart-bar"></i> Avançado</span>
             </div>
 
             <h4>O que você aprenderá:</h4>
             <ul class="curso-lista">
-                <li>✓ Física do Game</li>
-                <li>✓ IA Básica</li>
-                <li>✓ Modo Multiplayer</li>
-                <li>✓ Otimização de Performance</li>
-                <li>✓ Seu Game Profissional</li>
+                <li><i class="fas fa-check"></i> Física do Game</li>
+                <li><i class="fas fa-check"></i> IA Básica</li>
+                <li><i class="fas fa-check"></i> Modo Multiplayer</li>
+                <li><i class="fas fa-check"></i> Otimização de Performance</li>
+                <li><i class="fas fa-check"></i> Seu Game Profissional</li>
             </ul>
 
             <div class="curso-preco">
                 <span class="valor">Gratuito</span>
             </div>
 
-            <a href="cursos/curso-avancado.html" class="btn-curso btn-primario">Acessar Curso</a>
+            <a href="cursos/curso-avancado.html" class="btn-curso btn-primario"><i class="fas fa-play"></i> Acessar Curso</a>
         </div>
 
     </div>
@@ -134,7 +143,7 @@
 
 <!-- COMPARAÇÃO CURSOS -->
 <section class="comparacao">
-    <h2>Compare os Cursos</h2>
+    <h2><i class="fas fa-balance-scale"></i> Compare os Cursos</h2>
     <div class="tabela-comparacao">
         <table>
             <thead>
@@ -148,39 +157,39 @@
             <tbody>
                 <tr>
                     <td>Aulas em Vídeo</td>
-                    <td>✓ 20 aulas (conteúdo introdutório)</td>
-                    <td>✓ 35 aulas (conceitos intermediários)</td>
-                    <td>✓ 50 aulas (conteúdos avançados)</td>
+                    <td><i class="fas fa-check"></i> 20 aulas (conteúdo introdutório)</td>
+                    <td><i class="fas fa-check"></i> 35 aulas (conceitos intermediários)</td>
+                    <td><i class="fas fa-check"></i> 50 aulas (conteúdos avançados)</td>
                 </tr>
                 <tr>
                     <td>Projetos Práticos</td>
-                    <td>✓ 5 projetos guiados</td>
-                    <td>✓ 10 projetos guiados</td>
-                    <td>✓ 15 projetos (inclui projeto final)</td>
+                    <td><i class="fas fa-check"></i> 5 projetos guiados</td>
+                    <td><i class="fas fa-check"></i> 10 projetos guiados</td>
+                    <td><i class="fas fa-check"></i> 15 projetos (inclui projeto final)</td>
                 </tr>
                 <tr>
                     <td>Suporte</td>
-                    <td>✓ Suporte por email (resposta em até 72h)</td>
-                    <td>✓ Suporte por email + fórum da comunidade</td>
-                    <td>✓ Suporte por email + fórum da comunidade</td>
+                    <td><i class="fas fa-check"></i> Suporte por email (resposta em até 72h)</td>
+                    <td><i class="fas fa-check"></i> Suporte por email + fórum da comunidade</td>
+                    <td><i class="fas fa-check"></i> Suporte por email + fórum da comunidade</td>
                 </tr>
                 <tr>
                     <td>Certificado</td>
-                    <td>✓ Certificado de conclusão</td>
-                    <td>✓ Certificado de conclusão</td>
-                    <td>✓ Certificado de conclusão (com menção ao projeto final)</td>
+                    <td><i class="fas fa-check"></i> Certificado de conclusão</td>
+                    <td><i class="fas fa-check"></i> Certificado de conclusão</td>
+                    <td><i class="fas fa-check"></i> Certificado de conclusão (com menção ao projeto final)</td>
                 </tr>
                 <tr>
                     <td>Comunidade</td>
-                    <td>✓ Acesso ao grupo e fórum</td>
-                    <td>✓ Acesso ao grupo e fórum</td>
-                    <td>✓ Acesso ao grupo e fórum</td>
+                    <td><i class="fas fa-check"></i> Acesso ao grupo e fórum</td>
+                    <td><i class="fas fa-check"></i> Acesso ao grupo e fórum</td>
+                    <td><i class="fas fa-check"></i> Acesso ao grupo e fórum</td>
                 </tr>
                 <tr>
                     <td>Material Adicional</td>
-                    <td>✓ PDFs e recursos básicos</td>
-                    <td>✓ PDFs, assets e exercícios</td>
-                    <td>✓ Pacote completo: PDFs, assets, exercícios e modelos</td>
+                    <td><i class="fas fa-check"></i> PDFs e recursos básicos</td>
+                    <td><i class="fas fa-check"></i> PDFs, assets e exercícios</td>
+                    <td><i class="fas fa-check"></i> Pacote completo: PDFs, assets, exercícios e modelos</td>
                 </tr>
             </tbody>
         </table>
@@ -191,7 +200,7 @@
 <section class="cta-section">
     <h2>Escolha seu Caminho</h2>
     <p>Comece com o curso que melhor se adequa ao seu nível</p>
-    <a href="contato.html" class="cta-big">Fale Conosco</a>
+    <a href="contato.html" class="cta-big"><i class="fas fa-phone"></i> Fale Conosco</a>
 </section>
 
 <!-- FOOTER -->
@@ -212,8 +221,8 @@
         </div>
         <div class="footer-section">
             <h4>Contato</h4>
-            <p>📧 contato@gamelab.com</p>
-            <p>📱 (11) 9999-9999</p>
+            <p><i class="fas fa-envelope"></i> contato@gamelab.com</p>
+            <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
         </div>
     </div>
     <div class="footer-bottom">
@@ -223,5 +232,29 @@
 
 <script src="script.js"></script>
 <script src="hamburger-menu.js"></script>
+<script>
+// Simple canvas for cursos page
+const cursoCanvas = document.getElementById('scratch-canvas-cursos');
+if (cursoCanvas) {
+    const ctx = cursoCanvas.getContext('2d');
+    function draw() {
+        ctx.fillStyle = '#f7f9fc';
+        ctx.fillRect(0, 0, cursoCanvas.width, cursoCanvas.height);
+        const blocks = [
+            {x: 10, y: 20, w: 170, h: 40, color: '#FFCC00', text: 'Iniciante'},
+            {x: 10, y: 70, w: 170, h: 40, color: '#9966CC', text: 'Intermediário'},
+            {x: 10, y: 120, w: 170, h: 40, color: '#0FBD8C', text: 'Avançado'}
+        ];
+        blocks.forEach(b => {
+            ctx.fillStyle = b.color;
+            ctx.fillRect(b.x, b.y, b.w, b.h);
+            ctx.fillStyle = '#111';
+            ctx.font = 'bold 12px Cascadia Code';
+            ctx.fillText(b.text, b.x + 12, b.y + 26);
+        });
+    }
+    draw();
+}
+</script>
 </body>
 </html>
